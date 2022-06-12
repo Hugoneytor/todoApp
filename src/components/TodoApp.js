@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Todo from './Todo';
 
 const TodoApp = () => {
 
@@ -19,7 +20,7 @@ const TodoApp = () => {
         completed: false,
       }
 
-      setTodos([...todos, newTodo]);
+      setTodos([newTodo, ...todos]);
       setTitle('');
     }
   }
@@ -36,7 +37,14 @@ const TodoApp = () => {
           value="Create todo" 
           onClick={ handleClick }/>
       </form>
-      {title}
+      
+      <div className='todosContainer'>
+        {
+          todos.map((item)=>{
+            return <Todo key={item.id} item={item}/>
+          })
+        }
+      </div>
     </div>
   )
 }
