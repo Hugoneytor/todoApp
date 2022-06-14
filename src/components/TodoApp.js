@@ -41,7 +41,7 @@ const TodoApp = () => {
       <div className='todosContainer'>
         {
           todos.map((item)=>{
-            return <Todo key={item.id} item={item}/>
+            return <Todo key={item.id} item={item} setTodos={setTodos} todos={todos}/>
           })
         }
       </div>
