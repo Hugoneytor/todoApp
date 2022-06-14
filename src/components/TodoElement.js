@@ -11,9 +11,9 @@ const TodoElement = ({item, setIsEdit, setTodos, todos}) => {
 
   return (
     <div className='todoInfo'>
-      {item.title}
-      <button onClick={()=>setIsEdit(true)}>Edit</button>
-      <button onClick={deleteItem}>Delete</button>
+      <span className='todoTitle'>{item.title}</span>
+      <button className='button' onClick={()=>setIsEdit(true)}>Edit</button>
+      <button className='buttonDelete' onClick={deleteItem}>Delete</button>
     </div>
   )
 }

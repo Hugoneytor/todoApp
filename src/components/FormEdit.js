@@ -19,16 +19,19 @@ const FormEdit = ({item, setIsEdit}) => {
   return (
     <form className='todoUpdateForm'>
       <input 
+        className='todoInput'
         type='text' 
         value={inputEdit} 
         onChange={(e)=>setInputEdit(e.target.value)}/>
 
       <input 
+        className='button'
         type='submit' 
         value='Update' 
         onClick={handleEdit}/>
 
       <button 
+        className='buttonDelete'
         type='button' 
         onClick={cancelEdit}>
           Cancel
