@@ -1,5 +1,7 @@
-.todoContainer{
+body{
   background-color: #efefef;
+}
+.todoContainer{
   display: flex;
   align-items: center;
   flex-direction: column;
